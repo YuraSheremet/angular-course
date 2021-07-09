@@ -20,6 +20,7 @@ export class UserComponent implements OnInit, OnDestroy {
       id: this.route.snapshot.params['id'],
       name: this.route.snapshot.params['name'] 
     }
+    console.log(this.route);
     this.paramsSub = this.route.params.subscribe(
       (params: Params) => {
         this.user.id = params['id'];
